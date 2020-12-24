@@ -1006,6 +1006,15 @@ int HID_API_EXPORT_CALL HID_API_CALL hid_get_indexed_string(hid_device *dev, int
 	return 0;
 }
 
+int HID_API_EXPORT_CALL HID_API_CALL hid_get_feature_report_length(hid_device *dev)
+{
+	if (!dev)
+	{
+		return -1;
+	}
+
+	return dev->feature_report_length;
+}
 
 HID_API_EXPORT const wchar_t * HID_API_CALL  hid_error(hid_device *dev)
 {
