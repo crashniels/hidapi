@@ -450,6 +450,7 @@ extern "C" {
 		*/
 		int HID_API_EXPORT_CALL hid_get_indexed_string(hid_device *dev, int string_index, wchar_t *string, size_t maxlen);
 
+#ifdef _WIN32
 		/** @brief Returns the maximum feature report length of the device.
 
 			@ingroup API
@@ -459,7 +460,7 @@ extern "C" {
 				This function returns the length on success and -1 on error.
 		*/
 		int HID_API_EXPORT_CALL hid_get_feature_report_length(hid_device* dev);
-
+#endif
 		/** @brief Get a string describing the last error which occurred.
 
 			Whether a function sets the last error is noted in its
